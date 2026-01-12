@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definisi kelas komponen khusus untuk tema.
+  Menggunakan properti CSS standar untuk menghindari error @apply.
+*/
+@layer components {
+  /* Latar belakang utama aplikasi */
+  .themed-background {
+    background-color: #f1f5f9; /* slate-100 */
+    color: #1f2937; /* gray-800 */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .dark .themed-background {
+    background-color: #020617; /* slate-950 - Lebih gelap */
+    color: #cbd5e1; /* slate-300 */
+  }
+
+  /* Kartu, panel, atau tabel utama */
+  .themed-card {
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-radius: 0.75rem;
+  }
+  .dark .themed-card {
+    background-color: #1e293b; /* slate-800 */
+    color: #cbd5e1; /* slate-300 */
+  }
+
+  /* Sidebar */
+  .themed-sidebar {
+     background-color: white;
+     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  .dark .themed-sidebar {
+     background-color: #1e293b; /* slate-800 */
+     border-right-width: 1px;
+     border-color: #334155; /* slate-700 */
+  }
+
+  /* Header */
+  .themed-header {
+     background-color: white;
+     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  }
+  .dark .themed-header {
+     background-color: #1e293b; /* slate-800 */
+     border-bottom-width: 1px;
+     border-color: #334155; /* slate-700 */
+  }
+
+  /* Header Tabel */
+  .themed-table-head {
+      background-color: #f1f5f9; /* gray-100 */
+  }
+  .dark .themed-table-head {
+      background-color: #334155; /* slate-700 */
+      color: #e2e8f0; /* slate-200 */
+  }
+}
